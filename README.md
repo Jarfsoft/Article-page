@@ -9,6 +9,7 @@
 
 - Ruby
 - Ruby on Rails 6
+- Bootstrap
 - Rubocop
 - Visual Studio Code
 - Linux
