@@ -1,4 +1,8 @@
 class ProjectsController < ApplicationController
+  before_action :set_project, except: %i[new create]
+  before_action :require_user, except: [:show]
+  before_action :require_same_user, only: %i[edit update]
+
   def new
     @project = Project.new
   end
@@ -14,15 +18,12 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.find(params[:id])
   end
 
   def edit
-    @project = Project.find(params[:id])
   end
 
   def update
-    @project = Project.find(params[:id])
     if @project.update(project_params)
       redirect_to @project, notice: 'Your event was updated'
     else
@@ -32,7 +33,15 @@ class ProjectsController < ApplicationController
 
   private
 
+  def set_project
+    @project = Project.find(params[:id])
+  end
+
   def project_params
     params.require(:project).permit(:title, :text, :image)
+  end
+
+  def require_same_user
+    redirect_to @project unless current_user == @project.author
   end
 end

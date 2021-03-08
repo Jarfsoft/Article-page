@@ -16,7 +16,7 @@
         <%= image_tag "logo.png", :class => "logo" %>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link fw-bold" style="color: #fd7e14;" aria-current="page" href="#">Home</a>
+            <%= link_to 'Home', root_path, :class => "nav-link fw-bold th-or" %>
           </li>
           <li class="nav-item">
             <%= link_to 'Create Project', new_project_path, :class => "nav-link text-muted"%>
