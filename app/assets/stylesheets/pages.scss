@@ -2,7 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+@import "font-awesome";
+
 .logo {
   height: 10%;
   width: 10%;
+}
+
+.form-control {
+  width: 150px !important;
+  height: 30px;
+}
+
+.s-btn {
+  margin-left: 10px;
+  margin-right: 10px;
 }

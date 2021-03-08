@@ -15,3 +15,8 @@
  *= require_self
  */
  @import "bootstrap";
+
+.img-200 {
+  width: 200px;
+  height: auto;
+}

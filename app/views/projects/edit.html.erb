@@ -1,0 +1,25 @@
+<%= form_for(@project) do |f| %>
+  <ul>
+  <% @project.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p>
+    <%= f.label :Title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :Text %><br />
+    <%= f.text_area :text %>
+  </p>
+  <% if @project.image.attached? %>
+    <%= image_tag @project.image, class: "img-200" %>
+  <% end %>
+  <p>
+    <%= f.label :image %><br />
+    <%= f.file_field :image %>
+  </p>
+  <p>
+    <%= f.submit "Update"%>
+  </p>
+<% end %>

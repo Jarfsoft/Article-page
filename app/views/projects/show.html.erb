@@ -1,0 +1,9 @@
+<h1>Showing Project details</h1>
+
+<p>Title: <strong><%= @project.title %></strong></p>
+<p>Created by: <strong><%= @project.author.username %></strong></p>
+<% if @project.image.attached? %>
+  <%= image_tag @project.image, class: "img-200" %>
+<% end %>
+
+<p><%= @project.text %></p>
