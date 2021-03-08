@@ -29,9 +29,15 @@
           </li>
         </ul>
         <form class="d-flex">
-          <%= link_to 'login' %>
-          <p class= "mx-2">|</p>
-          <%= link_to 'register', register_url %>
+          <% if logged_in? %>
+            <%= link_to 'logout', logout_url, method: :delete %>
+            <p class= "mx-2">|</p>
+            <%= current_user.username %>
+          <% else %>
+            <%= link_to 'login', login_url %>
+            <p class= "mx-2">|</p>
+            <%= link_to 'register', register_url %>
+          <% end %>
           <input class="form-control me-2 ml-2" type="search" placeholder="Search" aria-label="Search">
           <a class="s-btn"><%= fa_icon "search" %></a>
         </form>

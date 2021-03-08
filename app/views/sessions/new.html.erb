@@ -1,0 +1,9 @@
+<%= form_with(scope: :sessions, url: login_path, local: true) do |f| %>
+  <p>
+    <%= f.label :Username %><br />
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.submit "Login"%>
+  </p>
+<% end %>
