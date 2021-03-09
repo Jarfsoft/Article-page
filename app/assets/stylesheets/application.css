@@ -20,3 +20,43 @@
   width: 200px;
   height: auto;
 }
+
+.bkg-tm {
+  background-color: rgb(78, 67, 61);
+}
+
+.margin-side-nav {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.margin-b {
+  margin-top: 10px;
+}
+
+.maxi-text-photo {
+  text-align: center;
+  bottom: 100px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.text-photo {
+  text-align: center;
+  bottom: 50px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.mini-text-photo {
+  text-align: start;
+  bottom: 25px;
+  left: 25px;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.t-photo {
+  bottom: -14px;
+  margin-right: 24px;
+  left: 25px;
+  font-size: 10px;
+}

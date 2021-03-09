@@ -8,42 +8,44 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
   </head>
-  <body>
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-fluid">
-      <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarColor01">
-        <%= image_tag "logo.png", :class => "logo" %>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <%= link_to 'Home', root_path, :class => "nav-link fw-bold th-or" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to 'Create Project', new_project_path, :class => "nav-link text-muted"%>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-muted" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-muted" href="#">About</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <% if logged_in? %>
-            <%= link_to 'logout', logout_url, method: :delete %>
-            <p class= "mx-2">|</p>
-            <%= current_user.username %>
-          <% else %>
-            <%= link_to 'login', login_url %>
-            <p class= "mx-2">|</p>
-            <%= link_to 'register', register_url %>
-          <% end %>
-          <input class="form-control me-2 ml-2" type="search" placeholder="Search" aria-label="Search">
-          <a class="s-btn"><%= fa_icon "search" %></a>
-        </form>
+  <body class="bkg-tm">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-white mt-2 margin-side-nav">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarColor01">
+          <%= image_tag "logo.png", :class => "logo" %>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <%= link_to 'Home', root_path, :class => "nav-link fw-bold th-or" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Create Project', new_project_path, :class => "nav-link text-muted"%>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-muted" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-muted" href="#">About</a>
+            </li>
+          </ul>
+          <form class="d-flex margin-b">
+            <% if logged_in? %>
+              <%= link_to 'logout', logout_url, method: :delete%>
+              <p class= "mx-2">|</p>
+              <%= current_user.username %>
+            <% else %>
+              <%= link_to 'login', login_url%>
+              <p class= "mx-2 mb-0">|</p>
+              <%= link_to 'register', register_url%>
+            <% end %>
+            <input class="form-control me-2 ml-2" type="search" placeholder="Search" aria-label="Search">
+            <a class="s-btn"><%= fa_icon "search" %></a>
+          </form>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
     <%= yield %>
   </body>
 </html>
