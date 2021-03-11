@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
   resources :categories, except: %i[destroy update]
   resources :projectcategoryrelationships, only: %i[new create destroy]
+  resources :votes, only: %i[new create destroy]
 end

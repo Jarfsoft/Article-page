@@ -23,7 +23,6 @@ class ProjectsController < ApplicationController
     relations.each do |r|
       @categories << Category.find_by(id: r.category_id)
     end
-
   end
 
   def edit

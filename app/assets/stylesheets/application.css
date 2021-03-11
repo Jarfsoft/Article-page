@@ -70,3 +70,12 @@
   width: 100%;
   height: 500px;
 }
+
+.bg-notice {
+  background-color: lightblue;
+}
+
+.vote {
+  width: 80px;
+  height: auto;
+}

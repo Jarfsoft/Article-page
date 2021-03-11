@@ -1,8 +1,12 @@
 <div class="bg-white nm">
   <div class="container">
-    <h1><%= @project.title %></h1>
-    <p>Created by: <strong><%= @project.author.username %></strong></p>
-
+    <div class="d-flex justify-content-between">
+      <div>
+        <h1><%= @project.title %></h1>
+        <p>Created by: <strong><%= @project.author.username %></strong></p>
+      </div>
+      <%= vote_unvote(@project) %>
+    </div>
     <div class="d-flex">
       <% if @project.image.attached? %>
         <%= image_tag @project.image, class: "img-400" %>

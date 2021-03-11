@@ -13,41 +13,48 @@
   </head>
   <body class="bkg-tm">
   <% fill_categories %>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-white mt-2 margin-side-nav">
-      <div class="container-fluid">
-        <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarColor01">
-          <%= image_tag "logo.png", :class => "logo" %>
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <%= link_to 'Home', root_path, :class => "nav-link fw-bold th-or" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Create Project', new_project_path, :class => "nav-link text-muted"%>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Categories', categories_path, :class => "nav-link text-muted"%>
-              <a class="nav-link text-muted" href="#"></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-muted" href="#">About</a>
-            </li>
-          </ul>
-          <form class="d-flex margin-b">
-            <% if logged_in? %>
-              <%= link_to 'logout', logout_url, method: :delete%>
-              <p class= "mx-2">|</p>
-              <%= current_user.username %>
-            <% else %>
-              <%= link_to 'login', login_url%>
-              <p class= "mx-2 mb-0">|</p>
-              <%= link_to 'register', register_url%>
-            <% end %>
-            <input class="form-control me-2 ml-2" type="search" placeholder="Search" aria-label="Search">
-            <a class="s-btn"><%= fa_icon "search" %></a>
-          </form>
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-white mt-2 margin-side-nav">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarColor01">
+            <%= image_tag "logo.png", :class => "logo" %>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <%= link_to 'Home', root_path, :class => "nav-link fw-bold th-or" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to 'Create Project', new_project_path, :class => "nav-link text-muted"%>
+              </li>
+              <li class="nav-item">
+                <%= link_to 'Categories', categories_path, :class => "nav-link text-muted"%>
+                <a class="nav-link text-muted" href="#"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-muted" href="#">About</a>
+              </li>
+            </ul>
+            <form class="d-flex margin-b">
+              <% if logged_in? %>
+                <%= link_to 'logout', logout_url, method: :delete%>
+                <p class= "mx-2">|</p>
+                <%= current_user.username %>
+              <% else %>
+                <%= link_to 'login', login_url%>
+                <p class= "mx-2 mb-0">|</p>
+                <%= link_to 'register', register_url%>
+              <% end %>
+              <input class="form-control me-2 ml-2" type="search" placeholder="Search" aria-label="Search">
+              <a class="s-btn"><%= fa_icon "search" %></a>
+            </form>
+          </div>
         </div>
+      </nav>
+      <div class="nm bg-white">
+        <% flash.each do |name, msg| %>
+          <div class="container bg-notice p-2"><%= msg %></div>
+        <% end %>
       </div>
-    </nav>
+    </div>
     <%= yield %>
   </body>
 </html>
