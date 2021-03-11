@@ -16,8 +16,8 @@
  */
  @import "bootstrap";
 
-.img-200 {
-  width: 200px;
+.img-400 {
+  width: 400px;
   height: auto;
 }
 
@@ -59,4 +59,14 @@
   margin-right: 24px;
   left: 25px;
   font-size: 10px;
+}
+
+.nm {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.big {
+  width: 100%;
+  height: 500px;
 }

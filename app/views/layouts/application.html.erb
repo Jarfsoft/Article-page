@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
   </head>
   <body class="bkg-tm">
+  <% fill_categories %>
     <nav class="navbar navbar-expand-lg navbar-dark bg-white mt-2 margin-side-nav">
       <div class="container-fluid">
         <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarColor01">
@@ -24,7 +25,8 @@
               <%= link_to 'Create Project', new_project_path, :class => "nav-link text-muted"%>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-muted" href="#">Pricing</a>
+              <%= link_to 'Categories', categories_path, :class => "nav-link text-muted"%>
+              <a class="nav-link text-muted" href="#"></a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-muted" href="#">About</a>

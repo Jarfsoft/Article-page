@@ -1,9 +1,31 @@
-<h1>Showing Project details</h1>
+<div class="bg-white nm">
+  <div class="container">
+    <h1><%= @project.title %></h1>
+    <p>Created by: <strong><%= @project.author.username %></strong></p>
 
-<p>Title: <strong><%= @project.title %></strong></p>
-<p>Created by: <strong><%= @project.author.username %></strong></p>
-<% if @project.image.attached? %>
-  <%= image_tag @project.image, class: "img-200" %>
-<% end %>
-
-<p><%= @project.text %></p>
+    <div class="d-flex">
+      <% if @project.image.attached? %>
+        <%= image_tag @project.image, class: "img-400" %>
+      <% end %>
+      <p class="container"><%= @project.text %></p>
+    </div>
+    <br/>
+    <h3>Categories</h3>
+    <ul>
+      <% show_categories(@categories).each do |c| %>
+        <li><%= c.name %><%= link_to 'Delete category',
+            projectcategoryrelationship_path(c, id: c.id,
+                                       projectcategoryrelationship: { category_id: c.id, project_id: @project.id }),
+            method: :delete %></li>
+      <% end %>
+    </ul>
+    <br/>
+    <% add_category = Projectcategoryrelationship.new %>
+    <%= form_with(model: add_category) do |f| %>
+      <p> Add new category: </p>
+      <%= f.collection_select :category_id, Category.order(:name), :id, :name %>
+      <%= f.text_field :project_id, value: @project.id, style: "display:none" %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>

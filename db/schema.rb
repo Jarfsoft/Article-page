@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 2021_03_07_194550) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "project_category_relationships", force: :cascade do |t|
+  create_table "projectcategoryrelationships", force: :cascade do |t|
     t.integer "category_id"
     t.integer "project_id"
     t.datetime "created_at", precision: 6, null: false
