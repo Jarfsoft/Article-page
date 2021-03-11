@@ -30,7 +30,7 @@ class ProjectsController < ApplicationController
 
   def update
     if @project.update(project_params)
-      redirect_to @project, notice: 'Your event was updated'
+      redirect_to @project, notice: 'Project was updated.'
     else
       render :edit
     end

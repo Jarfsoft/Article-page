@@ -1,39 +1,37 @@
-<% unless @voted_project.nil? %>
-  <div class="container-fluid position-relative px-0">
-    <%= image_tag @voted_project.image, class: "container-fluid"%>
+<div class="container-fluid position-relative px-0">
+  <%= big_image(@voted_project) %>
+  <div class="mx-5">
+    <h2 class="position-absolute fw-bold th-or maxi-text-photo"><%= no_project_yet_title(@voted_project) %></h2>
+    <p class="position-absolute text-photo fw-bold text-white h6"> <%= no_project_yet_text(@voted_project) %> </p>
+  </div>
+</div>
+<div class="row s-btn">
+  <div class="col-3 position-relative px-0">
+    <%= small_image(@category1) %>
     <div class="mx-5">
-      <h2 class="position-absolute fw-bold th-or maxi-text-photo"><%= @voted_project.title %></h2>
-      <p class="position-absolute text-photo fw-bold text-white h6"> <%= @voted_project.text %> </p>
+      <h2 class="position-absolute fw-bold th-or mini-text-photo"><%= no_project_yet_title(@category1) %></h2>
+      <p class="position-absolute t-photo fw-bold text-white"> <%= no_project_yet_text(@category1) %> </p>
     </div>
   </div>
-  <div class="row s-btn">
-    <div class="col-3 position-relative px-0">
-      <%= image_tag @voted_project.image, class: "container-fluid px-0"%>
-      <div class="mx-5">
-        <h2 class="position-absolute fw-bold th-or mini-text-photo"><%= @voted_project.title %></h2>
-        <p class="position-absolute t-photo fw-bold text-white"> <%= @voted_project.text %> </p>
-      </div>
-    </div>
-    <div class="col-3 position-relative px-0">
-      <%= image_tag @voted_project.image, class: "container-fluid px-0"%>
-      <div class="mx-5">
-        <h2 class="position-absolute fw-bold th-or mini-text-photo"><%= @voted_project.title %></h2>
-        <p class="position-absolute t-photo fw-bold text-white"> <%= @voted_project.text %> </p>
-      </div>
-    </div>
-    <div class="col-3 position-relative px-0">
-      <%= image_tag @voted_project.image, class: "container-fluid px-0"%>
-      <div class="mx-5">
-        <h2 class="position-absolute fw-bold th-or mini-text-photo"><%= @voted_project.title %></h2>
-        <p class="position-absolute t-photo fw-bold text-white"> <%= @voted_project.text %> </p>
-      </div>
-    </div>
-    <div class="col-3 position-relative px-0">
-      <%= image_tag @voted_project.image, class: "container-fluid px-0"%>
-      <div class="mx-5">
-        <h2 class="position-absolute fw-bold th-or mini-text-photo"><%= @voted_project.title %></h2>
-        <p class="position-absolute t-photo fw-bold text-white"> <%= @voted_project.text %> </p>
-      </div>
+  <div class="col-3 position-relative px-0">
+    <%= small_image(@category2) %>
+    <div class="mx-5">
+      <h2 class="position-absolute fw-bold th-or mini-text-photo"><%= no_project_yet_title(@category2) %></h2>
+      <p class="position-absolute t-photo fw-bold text-white"> <%= no_project_yet_title(@category2) %> </p>
     </div>
   </div>
-<% end %>
+  <div class="col-3 position-relative px-0">
+    <%= small_image(@category3) %>
+    <div class="mx-5">
+      <h2 class="position-absolute fw-bold th-or mini-text-photo"><%= no_project_yet_title(@category3) %></h2>
+      <p class="position-absolute t-photo fw-bold text-white"> <%= no_project_yet_title(@category3) %> </p>
+    </div>
+  </div>
+  <div class="col-3 position-relative px-0">
+    <%= small_image(@category4) %>
+    <div class="mx-5">
+      <h2 class="position-absolute fw-bold th-or mini-text-photo"><%= no_project_yet_title(@category4) %></h2>
+      <p class="position-absolute t-photo fw-bold text-white"> <%= no_project_yet_title(@category4) %> </p>
+    </div>
+  </div>
+</div>
