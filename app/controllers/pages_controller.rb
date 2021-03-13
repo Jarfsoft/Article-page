@@ -1,15 +1,12 @@
 class PagesController < ApplicationController
   def home
+    fill_categories
     @voted_project = Project.first
     @categories = []
-    relation = get_first_project_from_category(1)
-    @categories << get_project(relation)
-    relation = get_first_project_from_category(2)
-    @categories << get_project(relation)
-    relation = get_first_project_from_category(3)
-    @categories << get_project(relation)
-    relation = get_first_project_from_category(4)
-    @categories << get_project(relation)
+    @categories << get_project(1)
+    @categories << get_project(2)
+    @categories << get_project(3)
+    @categories << get_project(4)
   end
 
   def my_projects
@@ -36,7 +33,8 @@ class PagesController < ApplicationController
   end
 
   def get_project(num)
-    return Project.find_by(id: num.project_id) unless num.nil?
+    relation = get_first_project_from_category(num)
+    return Project.find_by(id: relation.project_id) unless relation.nil?
 
     nil
   end

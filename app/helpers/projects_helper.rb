@@ -13,7 +13,7 @@ module ProjectsHelper
   def delete_category(category)
     return unless logged_in? && @project.author_id == current_user.id
 
-    link_to 'Delete category', use_relation_direction(category), method: :delete
+    link_to 'Delete category', use_relation_direction(category), method: :delete, class: 'ml-2'
   end
 
   def add_category
