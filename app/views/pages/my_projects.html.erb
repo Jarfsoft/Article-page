@@ -1,5 +1,6 @@
-<div class="bg-white nm">
-  <div class="container">
+<div class="bg-white nm py-5">
+  <div class="container my-5 text-center">
+    <%= no_project %>
     <% @projects.each_slice(2) do |p1, p2| %>
       <div class="row">
         <%= show_project(p1) %>

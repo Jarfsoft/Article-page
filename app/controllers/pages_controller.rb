@@ -10,6 +10,7 @@ class PagesController < ApplicationController
   end
 
   def my_projects
+    redirect_to root_path unless logged_in?
     @projects = Project.where(['author_id = ?', current_user.id])
   end
 

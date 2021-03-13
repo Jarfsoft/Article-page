@@ -49,4 +49,10 @@ module PagesHelper
 
     render 'category', obj: category
   end
+
+  def no_project
+    return if @projects.first
+
+    '<h1 class="py-5 my-5">No projects yet</h1>'.html_safe
+  end
 end
