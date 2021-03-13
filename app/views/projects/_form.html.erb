@@ -1,0 +1,27 @@
+<div class="nm bg-white mt-1">
+  <div class="container py-5">
+    <%= form_for(@project) do |f| %>
+      <ul>
+        <% @project.errors.full_messages.each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+      <p>
+        <%= f.label :Title %><br />
+        <%= f.text_field :title %>
+      </p>
+      <p>
+        <%= f.label :Text %><br />
+        <%= f.text_area :text, {:class => "big"} %>
+      </p>
+      <%= show_image %>
+      <p>
+        <%= f.label :image %><br />
+        <%= f.file_field :image %>
+      </p>
+      <p>
+        <%= f.submit %>
+      </p>
+    <% end %>
+  </div>
+</div>

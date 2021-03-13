@@ -3,18 +3,18 @@ module PagesHelper
     return image_tag 'default.jpg', class: 'container-fluid' if project.nil?
 
     img = project.image
-    return image_tag 'default.jpg', class: 'container-fluid' if img.nil?
+    return link_to image_tag('default.jpg', class: 'container-fluid'), project_path(project) if img.nil?
 
-    image_tag img, class: 'container-fluid'
+    link_to image_tag(img, class: 'container-fluid'), project_path(project)
   end
 
   def small_image(project)
-    return image_tag 'default.jpg', class: 'container-fluid px-0' if project.nil?
+    return image_tag 'default.jpg', class: 'size-photo px-0 crop-center' if project.nil?
 
     img = project.image
-    return image_tag 'default.jpg', class: 'container-fluid px-0' if img.nil?
+    return link_to image_tag('default.jpg', class: 'size-photo px-0 crop-center'), project_path(project) if img.nil?
 
-    image_tag img, class: 'container-fluid px-0'
+    link_to image_tag(img, class: 'size-photo px-0 crop-center'), project_path(project)
   end
 
   def no_project_yet_title(project)
@@ -27,5 +27,11 @@ module PagesHelper
     return 'No project yet.' if project.nil?
 
     project.text
+  end
+
+  def show_project(project)
+    return if project.nil?
+
+    render 'project', obj: project
   end
 end

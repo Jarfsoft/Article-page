@@ -61,6 +61,21 @@
   font-size: 10px;
 }
 
+.size-photo {
+  width: 100%;
+  height: 190px;
+}
+
+.crop-center {
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.my-projects-image {
+  width: 100%;
+  height: 300px;
+}
+
 .nm {
   margin-left: 12px;
   margin-right: 12px;

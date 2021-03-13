@@ -1,0 +1,10 @@
+<div class="bg-white nm">
+  <div class="container">
+    <% @projects.each_slice(2) do |p1, p2| %>
+      <div class="row">
+        <%= show_project(p1) %>
+        <%= show_project(p2) %>
+      </div>
+    <% end %>
+  </div>
+</div>

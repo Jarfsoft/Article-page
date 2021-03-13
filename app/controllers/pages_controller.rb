@@ -1,14 +1,19 @@
 class PagesController < ApplicationController
   def home
     @voted_project = Project.first
+    @categories = []
     relation = get_first_project_from_category(1)
-    @category1 = get_project(relation)
+    @categories << get_project(relation)
     relation = get_first_project_from_category(2)
-    @category2 = get_project(relation)
+    @categories << get_project(relation)
     relation = get_first_project_from_category(3)
-    @category3 = get_project(relation)
+    @categories << get_project(relation)
     relation = get_first_project_from_category(4)
-    @category4 = get_project(relation)
+    @categories << get_project(relation)
+  end
+
+  def my_projects
+    @projects = Project.where(['author_id = ?', current_user.id])
   end
 
   def fill_categories

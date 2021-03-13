@@ -1,0 +1,7 @@
+<% add_category = Projectcategoryrelationship.new %>
+<%= form_with(model: add_category) do |f| %>
+  <p> Add new category: </p>
+  <%= f.collection_select :category_id, Category.order(:name), :id, :name %>
+  <%= f.text_field :project_id, value: @project.id, style: "display:none" %>
+  <%= f.submit "Add" %>
+<% end %>
