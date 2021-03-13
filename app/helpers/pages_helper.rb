@@ -26,6 +26,15 @@ module PagesHelper
     link_to image_tag(img, class: 'my-projects-image crop-center'), project_path(project)
   end
 
+  def category_image(project, category)
+    return image_tag 'default.jpg', class: 'my-projects-image crop-center' if project.nil?
+
+    img = project.image
+    return link_to image_tag('default.jpg', class: 'my-projects-image crop-center'), project_path(project) if img.nil?
+
+    link_to image_tag(img, class: 'my-projects-image crop-center'), category_path(category)
+  end
+
   def no_project_yet_title(project)
     return 'No project yet.' if project.nil?
 
@@ -36,18 +45,6 @@ module PagesHelper
     return 'No project yet.' if project.nil?
 
     project.text
-  end
-
-  def show_project(project)
-    return if project.nil?
-
-    render 'project', obj: project
-  end
-
-  def show_category(category)
-    return if category.nil?
-
-    render 'category', obj: category
   end
 
   def no_project

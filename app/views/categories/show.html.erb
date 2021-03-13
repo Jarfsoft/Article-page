@@ -1,0 +1,12 @@
+<div class="px-5 bg-white nm">
+<h1><%= @category.name %></h1>
+<div class="nm py-5">
+  <div class="row">
+    <% @projects.each_slice(2) do |p1, p2| %>
+    <%= show_project(p1) %>
+    <%= show_project(p2) %>
+    <% end %>
+  </div>
+</div>
+</div>
+

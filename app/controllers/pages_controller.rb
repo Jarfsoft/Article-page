@@ -3,10 +3,7 @@ class PagesController < ApplicationController
     fill_categories
     @voted_project = Project.first
     @categories = []
-    @categories << get_project(1)
-    @categories << get_project(2)
-    @categories << get_project(3)
-    @categories << get_project(4)
+    (1..4).each { |i| @categories << get_project(i) }
   end
 
   def my_projects

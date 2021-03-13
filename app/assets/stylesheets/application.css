@@ -61,6 +61,32 @@
   font-size: 10px;
 }
 
+.categories-text-photo {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-family: 'Roboto', sans-serif;
+  border-bottom: 3px solid rgba(255, 255, 0, 0.479);
+}
+
+.categories-text-photo2 {
+  position: absolute;
+  bottom: 65px;
+  left: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.categories-text-photo3 {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.contain {
+  position: relative;
+}
+
 .size-photo {
   width: 100%;
   height: 190px;
