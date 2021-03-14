@@ -3,6 +3,6 @@
     <%= category_image(@projects[obj.priority-1], obj) %>
     <h2 class="text-white fw-bold categories-text-photo"><%= obj.name %></h2>
     <h2 class="fw-bold th-or categories-text-photo2"><%= no_project_yet_title(@projects[obj.priority-1]) %></h2>
-    <p class="fw-bold text-white categories-text-photo3"> <%= no_project_yet_text(@projects[obj.priority-1]) %> </p>
+    <p class="fw-bold text-white categories-text-photo3"> <%= reduce_text(no_project_yet_text(@projects[obj.priority-1])) %> </p>
   </div>
 </div>

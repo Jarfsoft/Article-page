@@ -22,4 +22,10 @@ module ApplicationHelper
 
     render 'category', obj: category
   end
+
+  def reduce_text(content)
+    return content if content.length <= 100
+
+    "#{content[0..80]}..."
+  end
 end

@@ -9,8 +9,9 @@
     </div>
     <div class="d-flex">
       <%= show_image %>
-      <p class="container"><%= @project.text %></p>
+      <p class="container"><%= @project.text[0..1200] %></p>
     </div>
+    <%= @project.text[1201..] %>
     <br/>
     <h3>Categories</h3>
     <ul>

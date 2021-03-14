@@ -2,7 +2,7 @@
   <%= big_image(@voted_project) %>
   <div class="mx-5">
     <h2 class="position-absolute fw-bold th-or maxi-text-photo"><%= no_project_yet_title(@voted_project) %></h2>
-    <p class="position-absolute text-photo fw-bold text-white h6"> <%= no_project_yet_text(@voted_project) %> </p>
+    <p class="position-absolute text-photo fw-bold text-white h6"> <%= reduce_text(no_project_yet_text(@voted_project)) %> </p>
   </div>
 </div>
 <div class="row s-btn">
@@ -12,7 +12,7 @@
       <div class="mx-5">
         <h2 class="position-absolute fw-bold text-white category-text-photo"><%= Category.find_by(priority: c).name %></h2>
         <h2 class="position-absolute fw-bold th-or mini-text-photo"><%= no_project_yet_title(@categories[i]) %></h2>
-        <p class="position-absolute t-photo fw-bold text-white"> <%= no_project_yet_text(@categories[i]) %> </p>
+        <p class="position-absolute t-photo fw-bold text-white"> <%= reduce_text(no_project_yet_text(@categories[i])) %> </p>
       </div>
     </div>
   <% end %>
