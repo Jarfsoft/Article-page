@@ -22,12 +22,12 @@ class CategoriesController < ApplicationController
     Category.find_by(priority: num).id
   end
 
-  def get_first_project_from_category(num)
-    Projectcategoryrelationship.where(['category_id = ?', get_category_id(num)]).first
+  def get_last_project_from_category(num)
+    Projectcategoryrelationship.where(['category_id = ?', get_category_id(num)]).last
   end
 
   def get_project(num)
-    relation = get_first_project_from_category(num)
+    relation = get_last_project_from_category(num)
     return Project.find_by(id: relation.project_id) unless relation.nil?
 
     nil
