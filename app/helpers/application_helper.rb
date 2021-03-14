@@ -28,4 +28,8 @@ module ApplicationHelper
 
     "#{content[0..80]}..."
   end
+
+  def votes_number(project)
+    Vote.where(['project_id = ?', project.id]).count
+  end
 end

@@ -129,3 +129,8 @@
   font-family: 'Roboto', sans-serif;
   border-bottom: 3px solid rgba(255, 255, 0, 0.479);
 }
+
+.vote-text {
+  font-weight: bolder;
+  font-size: 40px;
+}
