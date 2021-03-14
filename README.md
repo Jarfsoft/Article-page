@@ -1,7 +1,9 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 # Ruby on Rails Private Events
 
-> TBA
+> This article page is built as the RoR capstone project. It's a publishing platform where different projects with diffetent categories can be exposed with an image.
+
+> The MVC concepts of RoR have been used to provide functionality.
 
 ![screenshot]
 

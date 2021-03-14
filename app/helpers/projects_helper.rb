@@ -39,6 +39,6 @@ module ProjectsHelper
   end
 
   def show_image
-    image_tag @project.image_url, class: 'img-400' if @project.image.attached?
+    image_tag @project.image_url, class: 'img-400' if @project.image
   end
 end
