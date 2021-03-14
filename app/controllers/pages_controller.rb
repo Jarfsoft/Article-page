@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PagesController < ApplicationController
   def home
     fill_categories
@@ -41,21 +43,30 @@ class PagesController < ApplicationController
     v = Vote.all
     return Project.last if v.first.nil?
 
+    c = create_hash(v)
+    r = count_votes(c)
+    Project.find_by(id: r)
+  end
+
+  def create_hash(urns)
     c = {}
-    v.each do |i|
+    urns.each do |i|
       c[i.project_id] += 1 if c.keys.include?(i.project_id)
       c[i.project_id] = 1 unless c.keys.include?(i.project_id)
     end
+    c
+  end
 
+  def count_votes(hash)
     v = 0
     r = 0
-    k = c.keys
-    (0...c.size).each do |i|
-      if c[k[i]] > v
-        v = c[k[i]]
+    k = hash.keys
+    (0...hash.size).each do |i|
+      if hash[k[i]] > v
+        v = hash[k[i]]
         r = k[i]
       end
     end
-    Project.find_by(id: r)
+    r
   end
 end

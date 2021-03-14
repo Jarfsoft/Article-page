@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Projectcategoryrelationship < ApplicationRecord
   belongs_to :project
   belongs_to :category

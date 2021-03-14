@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module PagesHelper
   def big_image(project)
     return image_tag 'default.jpg', class: 'container-fluid' if project.nil?

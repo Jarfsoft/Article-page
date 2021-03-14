@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ProjectsHelper
   def vote_unvote
     return unless logged_in?
