@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 2021_03_07_194550) do
     t.integer "author_id"
     t.string "title"
     t.text "text"
+    t.text "image_data"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

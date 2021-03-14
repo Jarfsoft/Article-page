@@ -22,7 +22,7 @@
 
 - Change to the project's root directory
 ```
-cd private-events
+cd Article-page
 ```
 
 - Install the required gems

@@ -2,7 +2,7 @@ module PagesHelper
   def big_image(project)
     return image_tag 'default.jpg', class: 'container-fluid' if project.nil?
 
-    img = project.image
+    img = project.image_url
     return link_to image_tag('default.jpg', class: 'container-fluid'), project_path(project) if img.nil?
 
     link_to image_tag(img, class: 'container-fluid'), project_path(project)
@@ -11,7 +11,7 @@ module PagesHelper
   def small_image(project)
     return image_tag 'default.jpg', class: 'size-photo px-0 crop-center' if project.nil?
 
-    img = project.image
+    img = project.image_url
     return link_to image_tag('default.jpg', class: 'size-photo px-0 crop-center'), project_path(project) if img.nil?
 
     link_to image_tag(img, class: 'size-photo px-0 crop-center'), project_path(project)
@@ -20,7 +20,7 @@ module PagesHelper
   def my_projects_image(project)
     return image_tag 'default.jpg', class: 'my-projects-image crop-center' if project.nil?
 
-    img = project.image
+    img = project.image_url
     return link_to image_tag('default.jpg', class: 'my-projects-image crop-center'), project_path(project) if img.nil?
 
     link_to image_tag(img, class: 'my-projects-image crop-center'), project_path(project)
@@ -29,7 +29,7 @@ module PagesHelper
   def category_image(project, category)
     return image_tag 'default.jpg', class: 'my-projects-image crop-center' if project.nil?
 
-    img = project.image
+    img = project.image_url
     return link_to image_tag('default.jpg', class: 'my-projects-image crop-center'), project_path(project) if img.nil?
 
     link_to image_tag(img, class: 'my-projects-image crop-center'), category_path(category)
