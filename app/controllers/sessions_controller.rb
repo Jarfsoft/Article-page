@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to root_path
     else
+      flash[:notice] = 'That didn\'t work.'
       render 'new'
     end
   end

@@ -34,4 +34,20 @@ module ApplicationHelper
   def votes_number(project)
     Vote.where(['project_id = ?', project.id]).count
   end
+
+  def logout_login
+    if logged_in?
+      link_to 'logout', logout_url, method: :delete
+    else
+      link_to 'login', login_url
+    end
+  end
+
+  def username_register
+    if logged_in?
+      current_user.username
+    else
+      link_to 'register', register_url
+    end
+  end
 end

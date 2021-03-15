@@ -22,9 +22,4 @@ class VotesController < ApplicationController
   def vote_params
     params.require(:vote).permit(:user_id, :project_id)
   end
-
-  def go_to(project, msg)
-    flash[:notice] = msg
-    redirect_to project_path(project)
-  end
 end

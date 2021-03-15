@@ -1,13 +1,13 @@
 <div class="bg-white nm">
   <div class="container py-5">
+    <ul>
+      <% @user.errors.full_messages.each do |error| %>
+        <li class="bg-notice p-2"><%= error %></li>
+      <% end %>
+    </ul>
     <h1>Register</h1>
     <div class="text-center py-5 my-5">
       <%= form_for(@user) do |f| %>
-        <ul>
-        <% @user.errors.full_messages.each do |error| %>
-          <li><%= error %></li>
-        <% end %>
-        </ul>
         <p>
           <%= f.label :Username %><br />
           <%= f.text_field :username %>
