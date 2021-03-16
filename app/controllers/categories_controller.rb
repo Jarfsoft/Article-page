@@ -7,8 +7,8 @@ class CategoriesController < ApplicationController
 
   def show
     @projects = []
-    r = Projectcategoryrelationship.where(['category_id = ?', params[:id]])
-    r.each { |i| @projects << Project.find_by(id: i.project_id) }
-    @category = Category.find_by(id: params[:id])
+    r = Projectcategoryrelationship.includes(:project, :category).where(['category_id = ?', params[:id]])
+    r.each { |i| @projects << i.project }
+    @category = r.first.category
   end
 end

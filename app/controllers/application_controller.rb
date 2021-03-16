@@ -15,17 +15,11 @@ class ApplicationController < ActionController::Base
     redirect_to login_path unless logged_in?
   end
 
-  def get_category_id(num)
-    Category.find_by(priority: num).id
-  end
-
-  def get_last_project_from_category(num)
-    Projectcategoryrelationship.where(['category_id = ?', get_category_id(num)]).last
-  end
-
   def get_project(num)
-    relation = get_last_project_from_category(num)
-    return Project.find_by(id: relation.project_id) unless relation.nil?
+    relation = Projectcategoryrelationship.includes(:category, :project)
+    projects = []
+    relation.each { |r| projects << r if r.category.priority == num }
+    return projects.last.project unless projects.last.nil?
 
     nil
   end
