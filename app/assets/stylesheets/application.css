@@ -14,7 +14,7 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap";
+@import "bootstrap";
 
 .img-400 {
   width: 400px;
