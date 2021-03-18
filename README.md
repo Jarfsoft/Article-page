@@ -1,5 +1,5 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
-# Ruby on Rails Private Events
+# Ruby on Rails Article-page
 
 > This article page is built as the RoR capstone project. It's a publishing platform where different projects with diffetent categories can be exposed with an image. At the home page the most voted project it is displayed and below you will find the most recent project of each category listed verticaly in order of priority from left to right. You can find a list of projects created by the current user by clicking in 'My Projects' link in the nav-bar. In the 'Categories' link you can choose a category and a list of all projects assigned to the category will display. A thumbnail of the last project added will displayed in each category.
 
@@ -10,7 +10,7 @@
 
 ## Live Demo
 
-Demo : [Demo](https://jarfsoft-article-page.herokuapp.com/)
+[Demo](https://jarfsoft-article-page.herokuapp.com/)
 
 
 ### Built With
