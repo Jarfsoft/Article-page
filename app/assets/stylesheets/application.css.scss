@@ -97,9 +97,16 @@
   object-position: 50% 50%;
 }
 
+.crop-center-square {
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 320px;
+  height: 320px;
+}
+
 .my-projects-image {
   width: 100%;
-  height: 300px;
+  height: 250px;
 }
 
 .nm {
@@ -133,4 +140,8 @@
 .vote-text {
   font-weight: bolder;
   font-size: 40px;
+}
+
+.underline-th {
+  border-bottom: 3px solid #ff7f16;
 }

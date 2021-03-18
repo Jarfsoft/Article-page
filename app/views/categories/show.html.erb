@@ -1,12 +1,18 @@
-<div class="px-5 bg-white nm">
-<h1><%= @category.name %></h1>
-<div class="nm py-5">
-  <div class="row">
-    <% @projects.each_slice(2) do |p1, p2| %>
-    <%= show_project(p1) %>
-    <%= show_project(p2) %>
+<div class="px-5 pb-2 bg-white nm">
+  <h1><%= @category.name %></h1>
+</div>
+<div class="container-fluid">
+  <div class="bg-white">
+    <% @projects.each_slice(4) do |p1, p2, p3, p4| %>
+      <div class="row">
+        <%= show_project(p1) %>
+        <%= show_project(p2) %>
+      </div>
+      <div class="row">
+        <%= tcejorp_wohs(p3) %>
+        <%= tcejorp_wohs(p4) %>
+      </div>
     <% end %>
   </div>
-</div>
 </div>
 

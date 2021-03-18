@@ -1,11 +1,11 @@
 <div class="col-6">
   <div class="row">
-    <div class="col-6"><%= categories_grid_image(obj) %></div>
     <div class="col-6 px-3">
       <%= link_to @category.name, category_path(@category), class: 'fw-bold th-or underline-th h3' %>
       <p class="fw-bold mt-3"><%= obj.title %></p>
       <p><%= reduce_text2(obj.text) %> <br/>
       <%= link_to 'Read more', project_path(obj), class: 'text-danger' %>
     </div>
+    <div class="col-6"><%= categories_grid_image(obj) %></div>
   </div>
 </div>
