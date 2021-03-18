@@ -1478,8 +1478,6 @@
     "path-is-absolute" "^1.0.0"
     "readdirp" "^2.2.1"
     "upath" "^1.1.1"
-  optionalDependencies:
-    "fsevents" "^1.2.7"
 
 "chokidar@^3.4.1":
   "version" "3.5.1"
@@ -1491,8 +1489,6 @@
     "is-glob" "~4.0.1"
     "normalize-path" "~3.0.0"
     "readdirp" "~3.5.0"
-  optionalDependencies:
-    "fsevents" "~2.3.1"
 
 "chownr@^1.1.1":
   "version" "1.1.4"
