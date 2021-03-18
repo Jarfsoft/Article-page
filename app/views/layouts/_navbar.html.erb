@@ -1,0 +1,33 @@
+<div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-white mt-2 margin-side-nav">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse d-flex justify-content-between align-items-center" id="navbarColor01">
+        <%= image_tag "logo.png", :class => "logo" %>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <%= link_to 'Home', root_path, :class => "nav-link fw-bold th-or" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Create Project', new_project_path, :class => "nav-link text-muted"%>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Categories', categories_path, :class => "nav-link text-muted"%>
+          </li>
+          <li class="nav-item">
+            <%= my_projects %>
+          </li>
+        </ul>
+        <form class="d-flex margin-b">
+          <%= logout_login %>
+          <p class= "mx-2">|</p>
+          <%= username_register %>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="nm bg-white pb-3">
+    <% flash.each do |name, msg| %>
+      <div class="container bg-notice p-2 mb-3"><%= msg %></div>
+    <% end %>
+  </div>
+</div>

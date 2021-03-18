@@ -11,6 +11,7 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     @project.author_id = current_user.id
     if @project.save
+      flash[:notice] = 'Project created.'
       redirect_to root_path
     else
       render 'new'
