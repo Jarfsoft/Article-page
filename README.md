@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 # Ruby on Rails Article-page
 
-> This article page is built as the RoR capstone project. It's a publishing platform where different projects with diffetent categories can be exposed with an image. At the home page the most voted project it is displayed and below you will find the most recent project of each category listed verticaly in order of priority from left to right. You can find a list of projects created by the current user by clicking in 'My Projects' link in the nav-bar. In the 'Categories' link you can choose a category and a list of all projects assigned to the category will display. A thumbnail of the last project added will displayed in each category.
+> This website was developed as the capstone project for Ruby on Rails. It is a platform that can be used to post ideas for projects and attach an image to it. On the main page you can find the most voted project and below the most recent projects of each category placed in order of priority from left to right. A list of all projects created by the user can be found in a link that says "My Projects". With the "Categories" link, a list of all categories will be displayed with a thumbnail of the last added project. Choosing one will display a list of all projects assigned to the category.
 
 > The MVC concepts of RoR have been used to provide functionality.
 

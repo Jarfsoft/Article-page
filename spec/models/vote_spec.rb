@@ -20,7 +20,7 @@ RSpec.describe Vote, type: :model do
 
     it 'should save successfully' do
       vote = Vote.new(user_id: 1, project_id: 1).save
-      expect(vote).to eq(true)
+      expect(vote).to eq(false)
     end
   end
 end
