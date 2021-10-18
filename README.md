@@ -67,7 +67,7 @@ Assuming that `Bundler` is installed, you can continue with the following steps:
 
 - Github : [@Jarfsoft](https://github.com/Jarfsoft)
 - Twitter : [@Jarfsoft](https://twitter.com/Jarfsoft)
-- Linkedin : [Jarfsoft](https://www.linkedin.com/in/juan-raudales-flores-7b0a3b113/)
+- Linkedin : [Jarfsoft](https://www.linkedin.com/in/juan-raudales-flores/)
 
 
 ### 🤝 Contributing
